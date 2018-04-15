@@ -34,7 +34,7 @@
             <Label fx:id="wrongLoginLabel" layoutX="200.0" layoutY="203.0" prefHeight="17.0" prefWidth="311.0" textFill="#f44336" />
          </children>
       </AnchorPane>
-      <JFXButton fx:id="loginSignupButton" layoutX="594.0" layoutY="22.0" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #ba000d;" text="Sign Up" textFill="WHITE">
+      <JFXButton fx:id="signupButton" layoutX="594.0" layoutY="22.0" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #ba000d;" text="Sign Up" textFill="WHITE">
          <font>
             <Font size="14.0" />
          </font>

@@ -8,6 +8,8 @@ import javafx.scene.Scene;
 
 
 public class Main extends Application {
+	
+	// Load the first view (login page)
 	@Override
 	public void start(Stage primaryStage) {
 		try {

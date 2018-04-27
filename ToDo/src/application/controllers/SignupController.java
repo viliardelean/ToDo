@@ -13,6 +13,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import application.database.DataBaseHandler;
 
 public class SignupController {
  	@FXML
@@ -43,9 +44,10 @@ public class SignupController {
 
 
     private void createUser() {
-		
+    	DataBaseHandler databaseHandler = new DataBaseHandler();
+    	
 		// Get the fields from view 
-		String name = signupFirstName.getText();
+    	String name = signupFirstName.getText();
         String lastName = signupLastName.getText();
         String userName = signupUsername.getText();
         String password = signupPassword.getText();
@@ -53,6 +55,7 @@ public class SignupController {
         try {
         	User user = new User(name, lastName, userName, password);
         	showLoginPage();
+        	databaseHandler.signUpUser(user);
         	
         } catch (IllegalArgumentException iae) {
         	System.out.println(iae.getMessage());

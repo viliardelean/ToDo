@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="585.0" prefWidth="592.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.ListController">
+   <children>
+      <AnchorPane prefHeight="77.0" prefWidth="592.0" style="-fx-background-color: #d32f2f;">
+         <children>
+            <Label alignment="CENTER" layoutX="215.0" layoutY="18.0" prefHeight="41.0" prefWidth="163.0" text="My 2DO's" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="5.0" layoutY="84.0" prefHeight="311.0" prefWidth="277.0">
+         <effect>
+            <Blend />
+         </effect>
+         <children>
+            <JFXListView fx:id="listTask" layoutX="7.0" layoutY="4.0" prefHeight="487.0" prefWidth="422.0" style="-fx-background-color: #ffff;">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </JFXListView>
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="addTaskButton" layoutX="450.0" layoutY="530.0" prefHeight="41.0" prefWidth="128.0" style="-fx-background-color: #d32f2f;" text="Add Task" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

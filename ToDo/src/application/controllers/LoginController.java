@@ -41,8 +41,14 @@ public class LoginController {
 
     @FXML
     void initialize() {
+    	
     	signupButton.setOnAction(e->  {
     		showSignUpPage();	    	
+    	});
+    	
+    	
+    	loginButton.setOnAction(e -> {
+    		
     	});
     }
 

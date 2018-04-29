@@ -67,5 +67,31 @@ public class DataBaseHandler {
         }
         return resultSet;
     }
+    
+    public ResultSet getTasksByUser(int userId) {
+
+        ResultSet resultTasks = null;
+
+        String query = "SELECT * FROM tasks WHERE userid=?";
+
+        try {
+            PreparedStatement preparedStatement = getDbConnection().prepareStatement(query);
+
+            preparedStatement.setInt(1, userId);
+
+
+            resultTasks = preparedStatement.executeQuery();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+
+        return resultTasks;
+    }
+    
+    
 
 }

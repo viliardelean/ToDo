@@ -16,9 +16,7 @@ import javafx.stage.Stage;
 import application.database.DataBaseHandler;
 
 public class SignupController {
- 	@FXML
-    private ResourceBundle resources;
-
+ 
     @FXML
     private JFXButton signupButton;
 

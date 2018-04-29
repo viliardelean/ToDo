@@ -6,6 +6,10 @@ public class Task {
 	private int taskId;
 	private String task;
 	
+	public Task(){
+		
+	}
+	
     public Task(String task, int userId) {
         this.task = task;
         this.userId = userId;

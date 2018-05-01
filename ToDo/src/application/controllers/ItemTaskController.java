@@ -15,14 +15,12 @@ import javafx.scene.layout.AnchorPane;
 
 
 public class ItemTaskController extends JFXListCell<Task> {
+	
 	 	@FXML
 	    private AnchorPane rootAnchorPane;
 
 	    @FXML
 	    private Label taskLabel;
-
-	    @FXML
-	    private Label dateLabel;
 
 	    @FXML
 	    private ImageView editButton;

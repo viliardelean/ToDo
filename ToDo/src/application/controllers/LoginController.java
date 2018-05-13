@@ -42,14 +42,10 @@ public class LoginController {
 	void initialize() {
 
 		// A new user must first create un account by clicking this button
-		signupButton.setOnAction(e -> {
-			showSignUpPage();
-		});
+		signupButton.setOnAction(e -> showSignUpPage());
 		
 		// An existing user provides it's credentials and clicks Login
-		loginButton.setOnAction(e -> {
-			loginUser();
-		});
+		loginButton.setOnAction(e -> loginUser());
 				
 	}
 	
@@ -107,14 +103,12 @@ public class LoginController {
 		try {
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(getClass().getResource("/application/views/listView.fxml"));
-
 		
 		Parent root = (Parent) loader.load();
-		
-		
-		
+		// Load the task cells of this user	
 		ListController listController= loader.getController();
-		listController.loadCells(userId);
+		listController.setCurentUserId(userId);
+		listController.loadCells();
 			 
 		Stage stage = new Stage();
 		stage.setScene(new Scene(root));

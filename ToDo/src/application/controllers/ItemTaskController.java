@@ -34,11 +34,15 @@ public class ItemTaskController extends JFXListCell<Task> {
 
 	    @FXML
 	    void initialize() {
-	       
+	       editButton.setOnMouseClicked(e -> showUpdateView());
 
 	    }
 	    
-	    @Override
+	    private void showUpdateView() {
+	    	System.out.println("J'y suis");
+		}
+
+		@Override
 	    public void updateItem(Task myTask, boolean empty) {
 
 	        databaseHandler = new DataBaseHandler(); 
